@@ -1,20 +1,14 @@
-//your JS code here. If required.
+const form = document.querySelector('form');
 
-let form = document.querySelector('form');
-let nameBox = document.getElementById('firstname');
-let lastNameBox = document.getElementById('lastname');
-let phoneBox = document.getElementById('tel');
-let emailBox = document.getElementById('email');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-form.addEventListener("submit", (e) => {
-	e.preventDefault();
+  const firstName = form.elements['First Name'].value.trim();
+  const lastName = form.elements['Last Name'].value.trim();
+  const phone = form.elements['Phone Number'].value.trim();
+  const email = form.elements['Email ID'].value.trim();
 
-	let name = nameBox.value.trim();
-	let lastName = lastNameBox.value.trim();
-	let tel = phoneBox.value.trim();
-	let email = emailBox.value.trim();
-
-	if (name && lastName && tel && email) {
-		alert(`FirstName: ${name} LastName: ${lastName} Phone Number: ${tel} Email ID: ${email}`);
-	}
+  if (firstName && lastName && phone && email) {
+    alert(`First Name: ${firstName} Last Name: ${lastName} Phone Number: ${phone} Email ID: ${email}`);
+  }
 });
