@@ -13,5 +13,7 @@ form.addEventListener("submit" , (e)=> {
 	let tel = phoneBox.value;
 	let email = emailBox.value;
 
-	alert(`FirstName:${name} LastName: ${lastName} Phone Number: ${tel} Email ID:${email}`)
+	if(name && lastName && tel && email){
+		alert(`FirstName:${name} LastName: ${lastName} Phone Number: ${tel} Email ID:${email}`)
+	}
 })
